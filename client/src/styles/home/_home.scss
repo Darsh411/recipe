@@ -1,0 +1,31 @@
+@import './hero';
+@import './header';
+
+.home,
+.profile {
+  font-family: 'Laila', sans-serif;
+
+  .content {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 2vh 8vw;
+    padding-right: 2vw;
+
+    footer {
+      text-align: center;
+      width: 100%;
+      text-align: right;
+      margin: 2vh auto;
+      text-transform: capitalize;
+      padding: 1vw 6vw;
+      font-size: 1.1vw;
+      color: $primary-green;
+      position: fixed;
+      bottom: 0;
+    }
+  }
+}

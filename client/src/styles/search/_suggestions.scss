@@ -1,0 +1,11 @@
+.suggestions {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1vw;
+
+  .header {
+    grid-row: 1;
+    @include flex(row, space-between, center);
+  }
+}

@@ -1,0 +1,13 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  min-height: 780px;
+  overflow: hidden;
+  position: relative;
+
+  #back-img {
+    margin-top: -9vh;
+    width: 102vw;
+    height: 102vh;
+  }
+}

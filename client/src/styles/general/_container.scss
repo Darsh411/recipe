@@ -1,0 +1,13 @@
+.container {
+  padding: 0 10vw;
+
+  display: grid;
+  gap: 2vw;
+}
+
+@media (max-width: 720px) {
+  .container {
+    padding: 0 4vw;
+    gap: 5vw;
+  }
+}

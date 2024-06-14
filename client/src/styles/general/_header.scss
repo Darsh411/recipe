@@ -1,0 +1,52 @@
+.search-header {
+  @include flex(row, space-between, center);
+  margin: 2vw auto 0.5vw auto;
+  height: 8vh;
+  // overflow: hidden;
+  gap: 5vw;
+  width: 100%;
+
+  .menu-icons {
+    @include flex(row, space-between, center);
+    height: fit-content;
+
+    .icon-link {
+      gap: 0.4vw;
+
+      &:hover {
+        transform: translateY(3px);
+        background-color: var(--section-back);
+      }
+
+      span {
+        font-size: 1vw;
+      }
+
+      .icon {
+        font-size: 1.2vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .search-header {
+    gap: 6vw;
+
+    .menu-icons {
+      @include flex(row, space-between, center);
+      height: fit-content;
+      width: 40%;
+
+      .icon-link {
+        span {
+          display: none;
+        }
+
+        .icon {
+          font-size: 4vw;
+        }
+      }
+    }
+  }
+}

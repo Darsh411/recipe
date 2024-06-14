@@ -1,0 +1,49 @@
+@import './../config';
+
+.discover-row {
+  display: grid;
+  gap: 1vw;
+  background-color: var(--back);
+
+  .header {
+    @include flex(row, space-between, center);
+
+    h3 {
+      font-size: 1.4vw;
+      text-transform: capitalize;
+    }
+
+    .see-all {
+      color: $primary-green;
+      font-size: 1vw;
+      font-weight: 600;
+      border: none;
+      border-radius: 0.6vw;
+      padding: 0.6vw;
+      text-transform: unset;
+    }
+  }
+
+  .recipes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vw;
+    text-transform: capitalize;
+
+    .description {
+      display: grid;
+      grid-template-columns: 5fr 1fr;
+      padding-top: 1vmin;
+
+      .name {
+        text-transform: capitalize;
+        font-size: 2.2vmin;
+        font-weight: 500;
+      }
+
+      .time {
+        @include flex(row, space-between, center);
+      }
+    }
+  }
+}

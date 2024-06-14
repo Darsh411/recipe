@@ -1,0 +1,221 @@
+@import './image';
+
+.auth {
+  width: 100vw;
+  min-height: 100vh;
+  max-height: fit-content;
+  padding: 1% 10%;
+  @include flex(column, flex-start, center);
+  gap: 3vw;
+  background-color: var(--section-back);
+
+  header {
+    @include flex(row, space-between, center);
+    width: 35vw;
+
+    .themer {
+      background-color: var(--back);
+    }
+  }
+
+  .greet {
+    width: 100%;
+    @include flex(row, space-between, center);
+    gap: 1vw;
+    margin-bottom: 1.4vw;
+
+    h4 {
+      text-transform: capitalize;
+      font-size: 1.4vw;
+    }
+
+    p {
+      color: red;
+      font-size: 0.8vw;
+    }
+  }
+
+  form {
+    position: relative;
+    @include flex(column, space-between, center);
+    align-items: flex-start;
+    height: 80%;
+    padding: 1vw 4%;
+    border-radius: 0.4vw;
+    box-shadow: $main-shadow;
+    background-color: var(--back);
+
+    .inputs,
+    .buttons {
+      display: grid;
+      gap: 2vw;
+      width: 30vw;
+
+      .email,
+      .password,
+      .name {
+        margin-top: -1vw;
+      }
+
+      label {
+        text-transform: capitalize;
+        font-size: 14px;
+      }
+
+      & > div {
+        border-bottom: 1px solid var(--text);
+        border: 1px solid var(--text);
+        border-radius: 0.3vw;
+        height: 1.6vw;
+        @include flex(row, space-between, center);
+        gap: 0.2vw;
+        padding: 1.4vw;
+
+        .icon {
+          font-size: 1.4vw;
+        }
+      }
+    }
+
+    .inputs {
+      input {
+        background-color: transparent;
+        padding: 1vw 1vw;
+        flex-grow: 1;
+        border: none;
+
+        &:focus {
+          border: none;
+        }
+      }
+    }
+
+    .buttons {
+      margin-top: 2vw;
+
+      button {
+        padding: 0.8vw;
+        border-radius: 0.3vw;
+        color: var(--text);
+      }
+
+      .submit-btn {
+        background-color: $primary-green;
+        color: #fff;
+
+        &:disabled {
+          background-color: darken($primary-green, 20%);
+
+          &:hover {
+            cursor: not-allowed;
+          }
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .or {
+        border: none;
+        @include flex(row, center, center);
+        gap: 4px;
+
+        hr {
+          flex-grow: 1;
+        }
+      }
+
+      .option-btn {
+        border: 1px solid var(--text);
+
+        &:hover {
+          background-color: var(--section-back);
+        }
+      }
+    }
+
+    .footer {
+      text-align: center;
+      width: 100%;
+      padding: 1.6vw;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .auth {
+    padding: 4vw 5vw;
+    @include flex(column, flex-start, center);
+    gap: 8vw;
+
+    header {
+      width: 85vw;
+    }
+
+    .greet {
+      gap: 4vw;
+      margin-bottom: 4vw;
+
+      h4 {
+        font-size: 5vw;
+      }
+
+      p {
+        font-size: 2.2vw;
+      }
+    }
+
+    form {
+      min-height: 30rem;
+      max-height: fit-content;
+      padding: 5vw 6vw;
+      border-radius: 1vw;
+
+      .inputs,
+      .buttons {
+        gap: 4vw;
+        width: 70vw;
+
+        label {
+          font-size: 4vw;
+        }
+
+        & > div {
+          border-radius: 0.8vw;
+          height: 8vw;
+          gap: 2vw;
+          padding: 5.8vw 3vw;
+
+          .icon {
+            font-size: 4vw;
+          }
+        }
+      }
+
+      .inputs {
+        input {
+          padding: 2.2vw;
+        }
+      }
+
+      .buttons {
+        margin-top: 5vw;
+
+        button {
+          padding: 2.8vw;
+          border-radius: 0.8vw;
+        }
+
+        .or {
+          @include flex(row, center, center);
+          gap: 2vw;
+        }
+      }
+
+      .footer {
+        padding: 3vw;
+        font-size: 2.4vw;
+      }
+    }
+  }
+}

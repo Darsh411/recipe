@@ -1,0 +1,37 @@
+.themer {
+  color: var(--text);
+  font-size: 1.4vw;
+  padding: 0.6vw;
+  border-radius: 0.6vw;
+  @include flex(row, space-around, center);
+  position: relative;
+  border: 1px solid var(--section-back);
+  background-color: var(--section-back);
+
+  .light-icon {
+    color: #212121;
+  }
+
+  .dark-icon {
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: unset;
+    border-color: var(--text);
+    transform: translateY(3px);
+  }
+}
+
+.theme-light .dark-icon,
+.theme-dark .light-icon {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .themer {
+    font-size: 4vw;
+    padding: 1.4vw;
+    border-radius: 1.2vw;
+  }
+}

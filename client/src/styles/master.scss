@@ -1,0 +1,111 @@
+@import './about/about';
+@import './discover/discover';
+@import './general/general';
+@import './home/home';
+@import './profile/profile';
+@import './search/search';
+@import './tutorial/tutorial';
+@import './errors/errors';
+@import './auth/auth';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: $transition;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  font-family: cursive;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: capitalize;
+}
+
+.App {
+  color: var(--text);
+  background-color: var(--back);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+img {
+  width: 100%;
+  border-radius: 1.4vmin;
+  justify-self: center;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  padding: 1vw;
+  border-bottom: 2px solid transparent;
+}
+
+a,
+a:link,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+button {
+  @include flex(row, center, center);
+  outline: none;
+  border: none;
+  background-color: transparent;
+  text-transform: capitalize;
+  font-size: small;
+  font-weight: 500;
+  padding: 1vmin;
+  border-radius: 1vw;
+  font-family: inherit;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input {
+  border: 1px solid transparent;
+  outline: none;
+  background-color: var(--section-back);
+  color: var(--text);
+  font-family: inherit;
+  font-weight: 500;
+  border-radius: 0.4vw;
+
+  &:focus {
+    border-color: var(--text);
+    background-color: transparent;
+  }
+}
+
+.see-all {
+  color: $primary-green;
+  font-size: 1vw;
+  border-radius: 0.3vw;
+  padding: 0.2vw 0.8vw;
+  text-transform: lowercase;
+  border: 1px solid transparent;
+
+  &:hover {
+    border: 1px solid $primary-green;
+  }
+}

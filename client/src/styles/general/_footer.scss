@@ -1,0 +1,40 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  .nav {
+    width: 100vw;
+    margin: 0;
+    background-color: $primary-green;
+    color: var(--text);
+
+    .links {
+      .logo {
+        color: var(--text);
+        margin-bottom: 1vw;
+      }
+
+      ul {
+        margin-left: 5vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  footer {
+    font-size: 10vw;
+    .nav {
+      .links {
+        .logo {
+          margin-bottom: 2vw;
+        }
+
+        ul {
+          margin-left: 5vw;
+        }
+      }
+    }
+  }
+}
